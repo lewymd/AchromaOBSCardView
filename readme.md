@@ -17,7 +17,7 @@ Once the server is running you will be able to visit http://localhost:3000/ (or 
 
 By default this is blank
 
-To change the image you can use the visual changer at http://http://localhost:3000/CardSearch.html or send a GET request with a tool such as StreamDeck by sending the request to http://localhost:3000/image/ch01-001.png replacing CH01-001 with the card you want
+To change the image you can use the visual changer at http://localhost:3000/CardSearch.html or send a GET request with a tool such as StreamDeck by sending the request to http://localhost:3000/image/ch01-001.png replacing CH01-001 with the card you want
 
 This will update the displayed image and after 20 seconds if no futher changes are made it will clear and go back to blank
 
