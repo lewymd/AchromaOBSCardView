@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    #image {
+      display: none;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      const loadImage = () => {
+        $('#image').attr('src', `/image?timestamp=${Date.now()}`).show();
+      };
+
+      const changeImage = (filename) => {
+        $.post(`/image/${filename}`, (data) => {
+          loadImage();
+        });
+      };
+
+      $('form').submit((e) => {
+        e.preventDefault();
+        const filename = $('#filename').val();
+        changeImage(filename);
+      });
+
+      const checkForUpdate = () => {
+        loadImage();
+      };
+
+      // Check for update every second
+      setInterval(checkForUpdate, 1000);
+    });
+  </script>
+</head>
+<body>
+  <img id="image" src="" alt="Current Image">
+</body>
+</html>
+
