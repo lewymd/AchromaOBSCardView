@@ -25,5 +25,6 @@ This will update the displayed image and after 20 seconds if no futher changes a
 
 Some of these settings can be changed by editing the config file.
 
-timeout - How long in MS before it reverts back to the fallbackImage
-fallbackImage - The image you want to be default. The ones added by default are blank.png which is just a transparent image and cardBack.png which is the Achroma card back
+`timeout` - How long in MS before it reverts back to the fallbackImage
+
+`fallbackImage` - The image you want to be default. The ones added by default are blank.png which is just a transparent image and cardBack.png which is the Achroma card back
